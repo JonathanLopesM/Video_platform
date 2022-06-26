@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
+import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 
@@ -28,8 +29,8 @@ export function Subscribe (){
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
-        <div className="max-w-[640px]">
+      <div className="w-full max-w-[1100px] sm:flex sm:flex-line items-center justify-center text-center sm:text-left sm:justify-between mt-20 mx-auto">
+        <div className="mx-auto max-w-[312px] sm:max-w-[640px] flex flex-col items-center sm:block">
           <Logo /> 
 
           <h1 className="mt-8 text-[2.5rem] leading-tight">
@@ -41,7 +42,7 @@ export function Subscribe (){
         </div>
 
         <div className="p-8  bg-gray-700 border-gray-500 rounded">
-          <strong className="text-2xl mb-6 block">
+          <strong className="text-2xl mb-6 block text-left">
             Inscreva-se gratuitamente
           </strong>
           <form 
@@ -78,6 +79,7 @@ export function Subscribe (){
         src="/src/assets/code-mockup.png" 
         className="mt-10" 
         alt="" />
+        <Footer />
     </div>
   )
 }
