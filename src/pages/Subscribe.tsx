@@ -26,7 +26,7 @@ export function Subscribe (){
       }
     })
 
-    navigate('/event')
+    navigate('/event/Lesson/abertura-do-evento-ignite-lab')
   }
 
   return (
